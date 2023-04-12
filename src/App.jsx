@@ -1,14 +1,27 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import Accordion from './components/Accordion';
+import './index.css';
 
 function App() {
+    const items = [
+        {
+            id: 1313,
+            label: 'Can I use React on a project?',
+            content: 'You can you React on any project.',
+        },
+        {
+            id: 1132132,
+            label: 'Can I use CSS on a project?',
+            content: 'You can you CSS on any project.',
+        },
+        {
+            id: 1839,
+            label: 'Can I use HTML on a project?',
+            content: 'You can you HTML on any project.',
+        },
+    ];
     return (
-        <div className="App">
-            {[1, 2, 3, 4].map((el, index) => {
-                return <span key={index}>{el}</span>;
-            })}
+        <div>
+            <Accordion items={items} />
         </div>
     );
 }
