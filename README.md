@@ -18,9 +18,10 @@
 ## Getting Started
 
 ```bash
-npx degit lzm0x219/template-vite-react myapp
+yarn create vite my-react-app --template react
 
-cd myapp
+
+cd my-react-app
 
 git init
 ```
@@ -32,7 +33,7 @@ git init
 
 ### Available scripts
 
-#### `pnpm dev`
+#### `yarn run dev`
 
 Runs the app in development mode.
 Open https://localhost:5173 to view it in the browser.
@@ -40,7 +41,7 @@ Open https://localhost:5173 to view it in the browser.
 The page will automatically reload if you make changes to the code.
 You will see the build errors and lint warnings in the console.
 
-#### `pnpm build`
+#### `yarn run build`
 
 Builds the app for production to the `dist` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
