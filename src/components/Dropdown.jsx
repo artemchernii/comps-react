@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { GoChevronUp, GoChevronDown } from 'react-icons/go';
 import Panel from './Panel';
+
 function Dropdown({ options, onChange, value }) {
     const [isOpen, setIsOpen] = useState(false);
     const divEl = useRef(); // define new element using useRef
@@ -48,6 +49,7 @@ function Dropdown({ options, onChange, value }) {
             /* sing ref to element */
             className="w-52 relative m-4"
         >
+            {/* <label>Dropdown</label> */}
             <Panel
                 className="flex justify-between items-center cursor-pointer"
                 onClick={handleDropdownToggle}
