@@ -19,6 +19,7 @@ function Modal({ onClose, actionBar, children }) {
                 </div>
             </div>
         </div>,
+
         document.querySelector('.modal-container')
     );
 }
