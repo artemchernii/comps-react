@@ -1,31 +1,22 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
 function Table({ data, config, keyFn }) {
-  useEffect(() => {
-    console.log("use effect");
-  }, []);
   const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => {
       return (
-        <td key={column.label} className="p-3">
+        <td className="p-2" key={column.label}>
           {column.render(rowData)}
         </td>
       );
     });
-
-    const renderedHeaders = config.map((column) => {
-        if (column.header) {
-            return <Fragment key={column.label}>{column.header()}</Fragment>;
-        }
-
-        return <th key={column.label}>{column.label}</th>;
-    });
+    return <tr key={keyFn(rowData)}>{renderedCells}</tr>;
+  });
 
   const renderedHeaders = config.map((column) => {
-    return (
-      <th key={column.label} className="p-2">
-        {column.label}
-      </th>
-    );
+    if (column.header) {
+      return <Fragment key={column.label}>{column.header()}</Fragment>;
+    }
+
+    return <th key={column.label}>{column.label}</th>;
   });
 
   return (
