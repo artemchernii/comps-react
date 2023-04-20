@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Fragment } from 'react';
 function Table({ data, config, keyFn }) {
   useEffect(() => {
     console.log("use effect");
@@ -12,12 +12,13 @@ function Table({ data, config, keyFn }) {
       );
     });
 
-    return (
-      <tr key={keyFn(rowData)} className="border-b">
-        {renderedCells}
-      </tr>
-    );
-  });
+    const renderedHeaders = config.map((column) => {
+        if (column.header) {
+            return <Fragment key={column.label}>{column.header()}</Fragment>;
+        }
+
+        return <th key={column.label}>{column.label}</th>;
+    });
 
   const renderedHeaders = config.map((column) => {
     return (

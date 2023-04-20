@@ -5,7 +5,6 @@ const NavigationContext = createContext();
 function NavigationProvider({ children }) {
     const [currentPath, setCurrentPath] = useState(window.location.pathname);
     useEffect(() => {
-        console.log('navigator starts with path: ', currentPath);
         const handler = () => {
             setCurrentPath(window.location.pathname);
         };
