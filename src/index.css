@@ -2,34 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-    --primary: blue;
-    --rounded: 3px solid var(var(--primary));
+  --primary: blue;
+  --rounded: 3px solid var(var(--primary));
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .App {
-    text-align: center;
-    margin: 2rem auto 0;
+  text-align: center;
+  margin: 2rem auto 0;
 }
 
 .primary-btn {
-    background-color: antiquewhite;
-    color: black;
-    border-radius: 0;
-    font-weight: lighter;
+  background-color: antiquewhite;
+  color: black;
+  border-radius: 0;
+  font-weight: lighter;
 }
