@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import useNavigation from '../hooks/useNavigation';
+import useNavigation from '../hooks/use-navigation';
 
 export default function Link({ to, className, activeClassName, children }) {
     const { navigate, currentPath } = useNavigation();
