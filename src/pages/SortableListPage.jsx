@@ -61,9 +61,8 @@ export default function SortableListPage() {
 
     return (
         <div>
-            {/* <SortableList data={data} config={config} keyGen={genUniqueKey} />;
-             */}
-            <ChatTable />
+            <SortableList data={data} config={config} keyGen={genUniqueKey} />
+            {/* <ChatTable /> */}
         </div>
     );
 }
