@@ -13,10 +13,6 @@ const Table = ({ data }) => {
     const [sortDirection, setSortDirection] = useState(null);
     const columns = Object.keys(data[0]);
 
-    // console.log(sortColumn);
-    // console.log(sortDirection);
-
-    // console.log(sortedData);
     const handleSort = (columnName) => {
         if (columnName !== sortColumn) {
             setSortColumn(columnName);
@@ -53,7 +49,7 @@ const Table = ({ data }) => {
         });
     }
     return (
-        <table>
+        <table className="table-auto">
             <thead>
                 <tr>
                     {columns.map((column) => (
