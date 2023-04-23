@@ -9,6 +9,7 @@ import TablePage from './pages/TablePage';
 
 import './index.css';
 import CounterPage from './pages/CounterPage';
+import SortableListPage from './pages/SortableListPage';
 
 function App() {
     return (
@@ -33,6 +34,9 @@ function App() {
                 </Route>
                 <Route path={'/counter'}>
                     <CounterPage initialCount={10} />
+                </Route>
+                <Route path={'/list'}>
+                    <SortableListPage />
                 </Route>
             </div>
         </div>

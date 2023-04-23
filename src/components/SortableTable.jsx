@@ -66,4 +66,5 @@ const getIcons = (label, sortBy, sortOrder) => {
     }
 };
 
+export { getIcons };
 export default SortableTable;
